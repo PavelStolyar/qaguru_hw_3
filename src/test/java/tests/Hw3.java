@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
-public class hw3 {
+public class Hw3 {
 
     @BeforeAll
     static void setup() {
@@ -24,7 +24,7 @@ public class hw3 {
         $("[name=q]").setValue("selenide").pressEnter();
         $$("ul.repo-list li").first().$("a").click();
         //go to wiki page
-        $$("ul.UnderlineNav-body.list-style-none li").get(4).click();
+        $(byText("Wiki")).click();
         //check SoftAssertions page existing == open SoftAssertions page
         $(byText("SoftAssertions")).click();
         // check JUnit5 code existing
